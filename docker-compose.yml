@@ -197,7 +197,7 @@ sonar:
     - "LDAP_USER_REAL_NAME_ATTRIBUTE=displayName"
     - "LDAP_USER_EMAIL_ATTRIBUTE=mail"
     - "LDAP_GROUP_BASE_DN=${LDAP_GROUP_BASE_DN},${LDAP_FULL_DOMAIN}"
-    - "LDAP_GROUP_REQUEST=(&(objectClass=groupOfUniqueNames)(uniqueMember={dn}))"
+    - "LDAP_GROUP_REQUEST=(&(objectClass=group)(memberUid={uid}))"
     - "LDAP_GROUP_ID_ATTRIBUTE=cn"
     - "SONARQUBE_JDBC_URL=jdbc:mysql://sonar-mysql:3306/${SONAR_MYSQL_DATABASE}?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true"
 
